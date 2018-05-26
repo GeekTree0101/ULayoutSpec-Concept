@@ -1,24 +1,37 @@
 //
 //  ViewController.swift
-//  UILayoutSpec
 //
-//  Created by Geektree0101 on 05/26/2018.
-//  Copyright (c) 2018 Geektree0101. All rights reserved.
+//  Created by Geektree0101.
+//  Copyright(C) 2018 Geektree0101. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
+    struct Const {
+        static let identifier: String = "TestCellIdentifier"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Test Table List"
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(TestCell.self,
+                                forCellReuseIdentifier: Const.identifier)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func tableView(_ tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int {
+        return 100
     }
-
+    
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView
+            .dequeueReusableCell(withIdentifier: Const.identifier) as! TestCell
+        return cell
+    }
 }
 

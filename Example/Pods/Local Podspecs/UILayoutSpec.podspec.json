@@ -1,0 +1,27 @@
+{
+  "name": "UILayoutSpec",
+  "version": "1.0.0",
+  "summary": "UIKit flexBox framework for iOS built on YogaKit",
+  "description": "Texture LayoutSpec mechanism inspired UIKit flexBox framework for iOS and built on Facebook YogaKit",
+  "homepage": "https://github.com/Geektree0101/UILayoutSpec",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Geektree0101": "h2s1880@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Geektree0101/UILayoutSpec.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "UILayoutSpec/Classes/**/*",
+  "dependencies": {
+    "YogaKit": [
+
+    ]
+  }
+}

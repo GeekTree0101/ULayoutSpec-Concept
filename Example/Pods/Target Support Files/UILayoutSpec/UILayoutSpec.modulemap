@@ -1,0 +1,6 @@
+framework module UILayoutSpec {
+  umbrella header "UILayoutSpec-umbrella.h"
+
+  export *
+  module * { export * }
+}
